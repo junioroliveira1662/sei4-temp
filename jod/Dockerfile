@@ -23,7 +23,6 @@ FROM bellsoft/liberica-openjdk-debian:17 as builder
 RUN apt-get update \
   && apt-get -y install git \
   && git clone https://github.com/jodconverter/jodconverter-samples /tmp/jodconverter-samples \
-  ## fixing https://github.com/jodconverter/jodconverter-samples/issues/2
   && chmod +x /tmp/jodconverter-samples/gradlew \
   && mkdir /dist
 
