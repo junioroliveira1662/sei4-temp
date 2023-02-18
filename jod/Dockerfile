@@ -18,15 +18,6 @@ RUN mkdir -p ${JAR_FILE_BASEDIR} /etc/app \
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["--spring.config.additional-location=optional:/etc/app/"]
 
-#  ----------------------------------  build our jodconvert builder, so source code with build tools
-# FROM bellsoft/liberica-openjdk-debian:17 as builder
-# RUN apt-get update \
-#   && apt-get -y install git \
-#   && git clone https://github.com/jodconverter/jodconverter-samples /tmp/jodconverter-samples \
-#   ## fixing https://github.com/jodconverter/jodconverter-samples/issues/2
-#   && chmod +x /tmp/jodconverter-samples/gradlew \
-#   && mkdir /dist
-
 #  ---------------------------------- gui builder
 FROM builder as jodconverter-build-gui
 WORKDIR /tmp/jodconverter-samples
