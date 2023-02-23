@@ -8,11 +8,11 @@ COPY . /app
 WORKDIR /app
 
 # Instale as dependências do PHP
-RUN apt-get update && \
-    apt-get install -y \
-        libpq-dev \
-        libzip-dev && \
-    docker-php-ext-install pdo pdo_pgsql zip
+# RUN apt-get update && \
+#     apt-get install -y \
+#         libpq-dev \
+#         libzip-dev && \
+#     docker-php-ext-install pdo pdo_pgsql zip
 
 # Exponha a porta 80
 EXPOSE 80
