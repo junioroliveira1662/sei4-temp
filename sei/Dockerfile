@@ -1,5 +1,5 @@
 
-FROM php-7-3-12:latest
+FROM centos7-php56:latest
 
 # Copie o seu código fonte para o diretório de trabalho
 COPY . /app
