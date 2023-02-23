@@ -1,5 +1,5 @@
 
-FROM php:latest
+FROM image-registry.openshift-image-registry.svc:5000/openshift/php:latest
 
 # Copie o seu código fonte para o diretório de trabalho
 COPY . /app
