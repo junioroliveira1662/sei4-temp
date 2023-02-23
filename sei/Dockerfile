@@ -14,8 +14,8 @@ WORKDIR /app
 #         libzip-dev && \
 #     docker-php-ext-install pdo pdo_pgsql zip
 
-# Exponha a porta 80
-EXPOSE 80
+# Exponha a porta 8080
+EXPOSE 8080
 
 # Inicie o servidor da web do PHP
-CMD ["php", "-S", "0.0.0.0:80"]
+CMD ["php", "-S", "0.0.0.0:8080"]
